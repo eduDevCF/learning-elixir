@@ -25,30 +25,34 @@ The 'Try' course is **free** (there is an extended paid for course).
 _How_? 👩🏻‍💻
 
 ✅ Installation ⬇️
+
 - ⬛ Mac 🍏
 - ✅ Ubuntu 🐧
 - ⬛ Windows 🪟
 - ✅ Check Everything Installed Correctly 👌
-- ⬛ Livebook 📘 
+- ⬛ Livebook 📘
 
 Start! 🟢
 ✅ Commands 💻
 
-⬛ Basic Types
+✅ Basic Types
+
 - ✅ Numbers
 - ✅ Booleans
 - ✅ Truthiness: truthy and falsy values
 - ✅ Atoms
 - ✅ Strings
-- ⬛ Lists
-- ⬛ Tuples
-- ⬛ Lists or Tuples?
+- ✅ Lists
+- ✅ Tuples
+- ✅ Lists or Tuples?
 
-⬛ Functions and Modules
-- ⬛ Anonymous functions
-- ⬛ Modules
+✅ Functions and Modules
+
+- ✅ Anonymous functions
+- ✅ Modules
 
 ⬛ Create Your First `Elixir` Project
+
 - ⬛ Initialise
 - ⬛ Edit `animals.ex`
 - ⬛ Run the Code

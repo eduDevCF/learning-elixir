@@ -54,6 +54,7 @@ Elixir 1.20.3 (compiled with Erlang/OTP 28)
 ## Getting Started
 
 Elixir interactive shell in your terminal: `iex`
+Exit `iex`: `CTRL+C` then type a(bort)
 
 ### Integers
 Dividing integers:
@@ -134,10 +135,69 @@ iex> "Hello " <> name
 ## Collections
 
 ### Lists
+```
+myList = [1,2,3]
+length(myList)
+#concatentation
+[1, 2, 3] ++ [4, 5 ,6 ]
+#removing items
+[1, true, 2, false, 3, true] -- [true, false]
+```
+Lists are enumerable and can use the Enum module to perform iterative functions such as mapping.
 
+### Tuples
+Tuples are not enumerable. You can reference tuple values by index but you cannot iterate over them. If you must treat your tuple as a list, then convert it using `Tuple.to_list(your_tuple)`.
 
+```
+iex> tuple = {:ok, "hello"}
+{:ok, "hello"}
 
+# get element at index 1
+iex> elem(tuple, 1)
+"hello"
 
+# get the size of the tuple
+iex> tuple_size(tuple)
+2
+```
+Reading large tuples is fast while updating them is slow. Reading a large list is slow, but updating it is fast.
+
+## Functions and Modules
+Functions are first class citizens. Functions can take other functions as arguments.
+
+### Anonymous functions
+Anonymous functions are closures (named functions are not) and as such they can access variables that are in scope when the function is defined. 
+```
+iex> add = fn a, b -> a + b end
+
+#Note the dot between the fn name and args
+iex> add.(1, 2)
+3
+
+iex> double = fn a -> add.(a, a) end
+
+iex> double.(5)
+10
+```
+
+### Modules
+In order to create your own modules in Elixir, use the `defmodule` macro, then use the `def` macro to define functions in that module. So in this case the module is `Math` and the function is `sum`.
+```
+defmodule Math do
+  def sum(a, b) do
+    a + b
+  end
+end
+```
+Save a file with the `.ex` extension and run in the terminal:
+```
+$ elixirc math.ex
+```
+This will generate a file named `Elixir.Math.beam` containing the bytecode for the defined module. If we start `iex` again, our module definition will be available (provided that iex is started in the same directory the bytecode file is in):
+```
+iex> Math.sum(1, 2)
+3
+```
 
 
 
