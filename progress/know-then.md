@@ -2,39 +2,39 @@
 Course: (https://knowthen.com/category/elixir-and-phoenix-for-beginners)
 By: James Moore
 
-- ✅ Introduction
-- ✅ Installing Elixir
-- 🟨 [Data Types](#data-types)
-- ⬛ Pattern Matching
-- ⬛ Elixir Source Files
-- ⬛ Control Flow
-- ⬛ Functions
-- ⬛ Collections
-- ⬛ Protocols
-- ⬛ Macros
-- ⬛ Build Tool - Mix
-- ⬛ What is Functional Programming?
-- ⬛ First Elixir Application
-- ⬛ Processes
-- ⬛ OTP
-- ⬛ Phoenix Web Framework
-- ⬛ Exit Polling Application
-- ⬛ Poller Dal
-- ⬛ Poller Phoenix
-- ⬛ Final Thoughts
+- [x] Introduction
+- [x] Installing Elixir
+- [ ] ▶️ [Data Types](#data-types)
+- [ ]  Pattern Matching
+- [ ]  Elixir Source Files
+- [ ]  Control Flow
+- [ ]  Functions
+- [ ]  Collections
+- [ ]  Protocols
+- [ ]  Macros
+- [ ]  Build Tool - Mix
+- [ ]  What is Functional Programming?
+- [ ]  First Elixir Application
+- [ ]  Processes
+- [ ]  OTP
+- [ ]  Phoenix Web Framework
+- [ ]  Exit Polling Application
+- [ ]  Poller Dal
+- [ ]  Poller Phoenix
+- [ ]  Final Thoughts
 
 ## Introduction
-- ✅ Who is this course for
-- ✅ Why was Elixir Created?
-- ✅Thinking about concurrency
-- ✅Concurrency in Sequential Languages
+- [x] Who is this course for
+- [x] Why was Elixir Created?
+- [x] Thinking about concurrency
+- [x] Concurrency in Sequential Languages
 
 ## Installing Elixir
-- ✅ Installing Elixir
-- ✅ Installing Elixir on Mac OS
-- ✅ Installing Elixir on Windows
-- ✅ Installing Elixir on Ubuntu
-- ✅ What we installed
+- [x] Installing Elixir
+- [x] Installing Elixir on Mac OS
+- [x] Installing Elixir on Windows
+- [x] Installing Elixir on Ubuntu
+- [x] What we installed
 
 ## Data Types
 - [x] Integers
