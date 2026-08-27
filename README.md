@@ -1,0 +1,28 @@
+# Free Online Resources for Learning Elixir
+
+## [Elixir and Phoenix For Beginners](https://knowthen.com/category/elixir-and-phoenix-for-beginners)
+James Moore has made an in-depth video course that shows how Elixir works and guides you through building a polling app, starting out as an Elixir project and then adding the Phoenix framework and Ecto databases. His videos are very easy to digest, and I love putting them on when I need a break from reading the docs. There are several sections covering the fundamentals of Elixir, so I haven't gotten to building the projects yet. James refers to practice exerices in the videos, but they aren't linked in his free online course.
+
+
+## [learn-elixir](https://github.com/dwyl/learn-elixir) repo by [dwyl](https://github.com/dwyl)
+This guide got me up and running quickly, writing and compiling Elixir scripts and a starter mix project right out of the gate.
+
+
+## [Elixir School](https://www.elixirschool.com/en/lessons/)
+They have text-based lessons on Beginner, Intermediate, and Advanced topics as well as other parts of the Elixir ecosystem. They are easy to follow and go a bit more in depth than the learn-elixir repo, which references Elixir School throughout it's guide. I like that it's broken into lessons instead of one long page like learn-elixir.
+
+
+## The [Elixir Track](https://exercism.org/tracks/elixir/about) on [Exercism](https://exercism.org)
+
+They have 168 free exercises in the browser (or using their CLI tool) to practice over 50 Elixir concepts. Each exercise has written instructions on the concept(sometimes videos) and tests to run before submitting your code. You can even choose to share your code with the community so others can learn from it. 
+
+
+## [DockYard Academy](https://github.com/DockYard-Academy/curriculum)
+
+Want a self-guided Elixir bootcamp experience? DockYard Academy has nearly 100 exercises for learning Elixir and Phoenix, all in interactive Livebook notebooks (like Jupyter Notebook for Python). This resource is what made me finally install [Livebook](https://livebook.dev/), which opens up a whole new world of learning resources.
+
+
+## [The Official Elixir Docs](https://elixir.hexdocs.pm/)
+This official docs live here. I could go here after learning about a feature of Elixir in a lesson elsewhere to dig in and find out more about all its potential functionality. 
+
+
