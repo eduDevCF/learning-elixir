@@ -37,32 +37,32 @@ Start! 🟢
 
 ✅ Basic Types
 
-- ✅ Numbers
-- ✅ Booleans
-- ✅ Truthiness: truthy and falsy values
-- ✅ Atoms
-- ✅ Strings
-- ✅ Lists
-- ✅ Tuples
-- ✅ Lists or Tuples?
+- [x] Numbers
+- [x] Booleans
+- [x] Truthiness: truthy and falsy values
+- [x] Atoms
+- [x] Strings
+- [x] Lists
+- [x] Tuples
+- [x] Lists or Tuples?
 
 ✅ Functions and Modules
 
-- ✅ Anonymous functions
-- ✅ Modules
+- [x] Anonymous functions
+- [x] Modules
 
 ⬛ Create Your First `Elixir` Project
 
-- ⬛ Initialise
-- ⬛ Edit `animals.ex`
-- ⬛ Run the Code
-- ⬛ Define Functions
-- ⬛ Extend Functions
-- ⬛ Add More Functions!
-- ⬛ Pattern Matching 
-- ⬛ Save Data to File
-- ⬛ Retrieve Data from File
-- ⬛ Pipe Operator
+- [ ] Initialise
+- [ ] Edit `animals.ex`
+- [ ] Run the Code
+- [ ] Define Functions
+- [ ] Extend Functions
+- [ ] Add More Functions!
+- [ ] Pattern Matching 
+- [ ] Save Data to File
+- [ ] Retrieve Data from File
+- [ ] Pipe Operator
 
 ⬛  Documentation
 
