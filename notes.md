@@ -141,7 +141,7 @@ iex> "Hello " <> name
 myList = [1,2,3]
 length(myList)
 #concatentation
-[1, 2, 3] ++ [4, 5 ,6 ]
+[1, 2, 3] ++ [4, 5, 6]
 #removing items
 [1, true, 2, false, 3, true] -- [true, false]
 ```
@@ -372,6 +372,7 @@ Operators like `++` used for concatentation are actually functions. Unlike typic
 ## Macros
 - Code that transforms other code
 - Like functions take data as parameters, macros take code as parameters.
+
 
 
 

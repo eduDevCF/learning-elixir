@@ -23,6 +23,8 @@ By: James Moore
 - [ ]  Poller Phoenix
 - [ ]  Final Thoughts
 
+**Progress:** To be calculated
+
 ## Introduction
 - [x] Who is this course for
 - [x] Why was Elixir Created?

@@ -1,13 +1,16 @@
 defmodule Progress do
   def update_progress(file_path) do
     file_lines = get_file_lines!(file_path)
-    task_lines = filter_tasks(file_lines)
+    progress_index = Enum.find_index(file_lines, &find_progress_line/1)
+    split_file_tup = Enum.split(file_lines, progress_index)
+    task_lines = filter_tasks(elem(split_file_tup, 1))
     ratio_tup = count_tasks(task_lines)
     percent_tup = percent_progress(ratio_tup)
     progress_msg = progress_message(percent_tup)
     IO.puts(progress_msg)
-    new_file = update_progress(file_lines, progress_msg)
-    overwrite_file(new_file, new_file)
+    new_file_body_lines = update_progress_msg(elem(split_file_tup,1), progress_msg)
+    new_file = compile_new_file(elem(split_file_tup,0) ++ new_file_body_lines)
+    overwrite_file(file_path, new_file)
   end
 
   def get_file_lines!(file_path) do
@@ -50,7 +53,7 @@ defmodule Progress do
   end
 
   def progress_message(tup3) do
-    "**Progress: #{elem(tup3,0)}** #{elem(tup3, 1)}/#{elem(tup3, 2)} sections studied"
+    "**Progress: #{elem(tup3,0)}%** #{elem(tup3, 1)}/#{elem(tup3, 2)} sections studied"
   end
 
   def find_progress_line(line) do
@@ -58,7 +61,7 @@ defmodule Progress do
   end
 
   ###I want to find the index of the line starting with **Progress and replace it
-  def update_progress(lines, msg) do
+  def update_progress_msg(lines, msg) do
     i = Enum.find_index(lines, &find_progress_line/1)
     List.replace_at(lines, i, msg)
   end
