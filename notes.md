@@ -286,6 +286,7 @@ You can leave out fields, and they will be set to `nil`. But you can't pass in f
 Structs use Map as a Reference module, but there are some things structs can't do that maps can out of the box.
 
 ### Variables
+- Using the match `=` operator, we can bind a value of any type to a variable name and re-bind any type to a variable.
 - No keywords needed to declare a variable.
 - starts with lowercase letter 
 - all lowercase letters is convention, words separated by an underscore (snake case)
@@ -313,8 +314,37 @@ iex> double.(5)
 10
 ```
 
+### Named Functions
+- must be defined in a module
+- `def` keyword defines a public named function
+- `defp` defines a private function which can only be used within that module.
+- can have 0+ args
+- A function always *implicitly returns* the value of the last expression. No need of a return keyword.
+- Invoke a function with its `Module.function_name` and passing args
+
+```
+defmodule Calculator do
+  def subtract(x, y) do
+    private_subtract(x, y)
+  end
+
+  defp private_subtract(x, y), do: x - y
+end
+
+difference = Calculator.subtract(7, 2)
+# => 5
+
+difference = Calculator.private_subtract(7, 2)
+# => ** (UndefinedFunctionError) function Calculator.private_subtract/2 is undefined or private
+#       Calculator.private_subtract(7, 2)
+```
+
+
 ### Modules
-A way to group related things (fuctions) and act as a container for defining structs.
+- A way to group related things (fuctions) and act as a container for defining structs.
+- All named functions must be defined in a module.
+- Analogous to a class in other languages
+- Names should use `PascalCase` and must start with an uppercase letter
 
 In order to create your own modules in Elixir, use the `defmodule` macro, then use the `def` macro to define functions in that module. So in this case the module is `Math` and the function is `sum`.
 ```
@@ -324,6 +354,8 @@ defmodule Math do
   end
 end
 ```
+
+
 Save a file with the `.ex` extension and run in the terminal:
 ```
 $ elixirc math.ex
