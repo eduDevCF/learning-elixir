@@ -2,10 +2,10 @@
 Course: (https://knowthen.com/category/elixir-and-phoenix-for-beginners)
 By: James Moore
 
-- [x] Introduction
-- [x] Installing Elixir
-- [ ] ▶️ [Data Types](#data-types)
-- [ ]  Pattern Matching
+- [x]  Introduction
+- [x]  Installing Elixir
+- [x]  [Data Types](#data-types)
+- [ ]  ▶️ [Pattern Matching](#pattern-matching)
 - [ ]  Elixir Source Files
 - [ ]  Control Flow
 - [ ]  Functions
@@ -43,15 +43,15 @@ By: James Moore
 - [x] Boolean
 - [x] Strings
 - [x] [Maps](https://knowthen.com/elixir-and-phoenix-for-beginners/data-types/maps)
-- [ ] [Lists](https://knowthen.com/elixir-and-phoenix-for-beginners/data-types/lists)
-- [ ] List Operations
-- [ ] Tuples
-- [ ] Keyword Lists
-- [ ] Structs
-- [ ] Immutable Data
+- [x] [Lists](https://knowthen.com/elixir-and-phoenix-for-beginners/data-types/lists)
+- [x] List Operations
+- [x] Tuples
+- [x] Keyword Lists
+- [x] Structs
+- [x] Immutable Data
 - [ ] Variables
 
-## Pattern Matching
+## [Pattern Matching](https://knowthen.com/category/pattern-matching/)
 - [ ] Pattern Matching Introduction
 - [ ] Pattern Matching Strings
 - [ ] Pattern Matching Maps

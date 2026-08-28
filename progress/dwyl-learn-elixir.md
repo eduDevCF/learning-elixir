@@ -51,7 +51,7 @@ Start! 🟢
 - [x] Anonymous functions
 - [x] Modules
 
-⬛ Create Your First `Elixir` Project
+⬛ [Create Your First `Elixir` Project](https://github.com/dwyl/learn-elixir#create-your-first-elixir-project)
 
 - [ ] Initialise
 - [ ] Edit `animals.ex`

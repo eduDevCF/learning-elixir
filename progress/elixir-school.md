@@ -17,7 +17,7 @@ Course: (https://www.elixirschool.com/en/lessons/)
 - String Interpolation
 - String Concatenation
 
-2. ⬛ [Collections](https://elixirschool.com/en/lessons/basics/collections)
+2. ✅ [Collections](https://elixirschool.com/en/lessons/basics/collections)
 - Lists
 - List Concatenation
 - List Subtraction
