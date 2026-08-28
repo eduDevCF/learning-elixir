@@ -23,7 +23,7 @@ By: James Moore
 - [ ]  Poller Phoenix
 - [ ]  Final Thoughts
 
-**Progress:** To be calculated
+**Progress: 14.09%** 21/149 sections studied
 
 ## Introduction
 - [x] Who is this course for
