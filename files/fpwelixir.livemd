@@ -1,0 +1,107 @@
+# Functional Programming with Elixir
+
+## About
+
+Coding through this video tutorial on YouTube by Octallium
+
+https://www.youtube.com/watch?v=IiIgm_yaoOA
+
+## Recursion
+
+### Factorial
+
+Multiply all the numbers from 1 up to and including the given number
+
+```elixir
+defmodule Factorial do
+  # base case
+  def of(1), do: 1
+
+  def of(n) do
+    n * of(n - 1)
+  end
+
+  # tail recursion version
+  def of_tail_rec(n, acc \\ 1) # 1 is default value
+  def of_tail_rec(1, acc), do: acc
+  def of_tail_rec(n, acc), do: of_tail_rec(n - 1, acc * n)
+  
+end
+
+Factorial.of(5)
+```
+
+```elixir
+Factorial.of_tail_rec 5
+```
+
+using `num` as a variable through an error because a function was expected
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Reverse a number
+
+I had to covert to and from a String to first wrap my mind around this after failing to write the function mathematically.
+
+```elixir
+#WIP
+#defmodule ReverseNum do
+#  def reverse(number, digit_list // [], iteration // 1)
+#  def reverse(0, digit_list, iteration) do
+#    
+#  end
+#  def reverse(number, digit_list, iteration) do
+#    new_number = div number, 10
+#    remainder = rem number, 10
+#    IO.puts("num: #{number}\nnew num: #{new_number}\nremainder: #{remainder}")
+#    reverse(, [rem(number, 10) | digit_list)
+#      
+#    end
+#  end 
+#end
+```
+
+```elixir
+n = 123
+new_num = div n, 10
+remainder = rem n, 10
+new_num
+```
+
+```elixir
+defmodule ReverseNums do
+  def reverse_digits(original_num) do
+    num_str = Integer.to_string(original_num)
+    reverse_str(num_str, "")
+  end
+
+  def reverse_str(str, reversed_str \\"")
+  def reverse_str("", reversed_str), do: String.to_integer(reversed_str)
+  def reverse_str(str, reversed_str) do
+    new_reversed = String.first(str) <> reversed_str 
+    rest_of_string = String.slice(str, 1..-1//1)
+    reverse_str(rest_of_string, new_reversed)
+  end
+
+end
+
+ReverseNums.reverse_digits(94804)
+```
+
+### Reverse a number without using strings
+
+```elixir
+defmodule ReverseNum do
+  def reversioso(num, acc \\0) 
+  def reversioso(0, acc), do: acc
+  def reversioso(num, acc) do
+    new_num = div num, 10
+    remainder = rem num, 10
+    new_acc = acc * 10 + remainder
+    #IO.puts("num: #{num}\nnew_num: #{new_num}\nremainder: #{remainder}\nnew_acc: #{new_acc}")
+    reversioso(new_num, new_acc)
+  end
+end
+
+ReverseNum.reversioso(94806)
+```
