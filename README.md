@@ -8,7 +8,7 @@ James Moore has made an in-depth video course that shows how Elixir works and gu
 This guide got me up and running quickly, writing and compiling Elixir scripts and a starter mix project right out of the gate.
 
 
-## [Elixir School](https://www.elixirschool.com/en/lessons/)
+## [Elixir School](https://elixirschool.com/en/)
 They have text-based lessons on Beginner, Intermediate, and Advanced topics as well as other parts of the Elixir ecosystem. They are easy to follow and go a bit more in depth than the learn-elixir repo, which references Elixir School throughout it's guide. I like that it's broken into lessons instead of one long page like learn-elixir.
 
 
