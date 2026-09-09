@@ -20,7 +20,7 @@ iex
 
 Oh glob, I forgot to deactivate the venv for my last Python project. Did I just install elixir there? Will is still work after I deactivate the env? Lemme see. 
 
-This is the print out after running the instal script:
+This is the print out after running the install script:
 ```
 (asteroids) stina@RubyBlue:~/dev/alchemy$ sh install.sh elixir@1.20.3 otp@28.4
 downloading https://github.com/elixir-lang/elixir/releases/download/v1.20.3/elixir-otp-28.zip
@@ -39,11 +39,14 @@ Run this (or add to your ~/.bashrc or similar file):
 OK, it looks like everything is fine when I deactivated the venv. It all installed where it was supposed to and all the files were there.
 
 ✅ Exported path vars
+
 ✅ Additionally, I removed the install.sh file from my directory.
+
+Interestingly enough, after closing the terminal, Elixir can't run, so I had to write the export PATH lines directly in my .bashrc.
 
 Now I'm following the guide from dwyll's [learn-elixir](https://github.com/dwyl/learn-elixir) repo. But I did not follow their `apt-get` install process.
 
-###Check Everything Installed Correctly 👌
+### Check Everything Installed Correctly 👌
 ```
 elixir -v
 Erlang/OTP 28 [erts-16.3] [source] [64-bit] [smp:12:12] [ds:12:12:10] [async-threads:1] [jit:ns]
@@ -57,6 +60,14 @@ Elixir 1.20.3 (compiled with Erlang/OTP 28)
 Elixir interactive shell in your terminal: `iex`
 Exit `iex`: `CTRL+C` then type a(bort)
 Interrupt a multi-line input: `#iex:break`
+
+### Starting Livebook
+```
+cd livebook
+mix setup.prod
+# Run the Livebook server
+MIX_ENV=prod mix phx.server
+```
 
 ### Integers
 Dividing integers:
