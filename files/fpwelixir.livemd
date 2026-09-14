@@ -105,3 +105,80 @@ end
 
 ReverseNum.reversioso(94806)
 ```
+
+## Lists
+
+Lists are actually linked lists not arrays.
+
+### Heads and Tails
+
+```elixir
+list = [1,2,3]
+IO.puts(hd list)
+tl list
+```
+
+```elixir
+[ h | t ] = list
+IO.puts("h: #{h}")
+t
+```
+
+```elixir
+list2 = ["a"]
+[h|t] = list2
+IO.puts(h)
+t
+```
+
+### Enum
+
+* Lists implement the Enumerable protocol
+* helps you iterate over your lists/collections
+
+```elixir
+Enum.sum([1,2,3])
+```
+
+```elixir
+defmodule Lists do
+  #alias
+  @spec sum(list(number())) :: integer()
+  def sum(nums), do: sum_tail_rec(nums)
+  
+  #base case
+  @spec sum_simple(list(number())) :: integer()
+  def sum_simple([]), do: 0  
+  #pattern matching inside the list parameter!?!
+  def sum_simple([h | t]), do: sum_simple(t) + h
+
+  @spec sum_tail_rec(list(number()), integer()) :: integer()
+  def sum_tail_rec(nums, sum \\ 0)     #functin head with default values
+  def sum_tail_rec([], sum), do: sum   #base case
+  def sum_tail_rec([h|t], sum), do: sum_tail_rec(t, sum+h)
+    
+end
+
+IO.puts(Lists.sum_simple([1,2,3]))
+
+IO.puts(Lists.sum_tail_rec([1,2,3]))
+```
+
+### Documentation with mix
+
+```
+  # For a module
+  @moduledoc ***
+    
+  Function Summary:
+  1. sum
+  ***
+
+  # For a function
+  @doc ***
+  Returns sum of numbers in a list
+  ***
+  
+  # spec with types for the input and output
+  @spec sum(list(number())) :: number()
+```
