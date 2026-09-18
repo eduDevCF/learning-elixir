@@ -1,7 +1,9 @@
 # Free Online Resources for Learning Elixir
 
 ## [Elixir and Phoenix For Beginners](https://knowthen.com/category/elixir-and-phoenix-for-beginners)
-James Moore has made an in-depth video course that shows how Elixir works and guides you through building a polling app, starting out as an Elixir project and then adding the Phoenix framework and Ecto databases. His videos are very easy to digest, and I love putting them on when I need a break from reading the docs. There are several sections covering the fundamentals of Elixir, so I haven't gotten to building the projects yet. James refers to practice exerices in the videos, but they aren't linked in his free online course.
+James Moore has made an in-depth video course that shows how Elixir works and guides you through building a polling app, starting out as an Elixir project and then adding the Phoenix framework and Ecto databases. His videos are very easy to digest, and I love putting them on when I need a break from reading the docs. There are several sections covering the fundamentals of Elixir, so I haven't gotten to building the projects yet. James refers to practice exercises in the videos, but they aren't linked in his free online course.
+
+**Progress: 14.09%** (21/149 sections studied)
 
 
 ## [learn-elixir](https://github.com/dwyl/learn-elixir) repo by [dwyl](https://github.com/dwyl)
@@ -15,7 +17,8 @@ They have text-based lessons on Beginner, Intermediate, and Advanced topics as w
 ## The [Elixir Track](https://exercism.org/tracks/elixir/about) on [Exercism](https://exercism.org)
 
 They have 168 free exercises in the browser (or using their CLI tool) to practice over 50 Elixir concepts. Each exercise has written instructions on the concept(sometimes videos) and tests to run before submitting your code. You can even choose to share your code with the community so others can learn from it. 
-Progress: 1.8% (3/168 Exercises)
+
+**Progress: 1.8%** (3/168 Exercises)
 
 
 ## [DockYard Academy](https://github.com/DockYard-Academy/curriculum)
@@ -29,7 +32,8 @@ This official docs live here. I could go here after learning about a feature of 
 
 ## [Functional Programming with Elixir](https://www.youtube.com/watch?v=IiIgm_yaoOA)
 This video tutorial is a 5-hour crash course into Elixir by [Octallium](https://www.octallium.com/) and freeCodeCamp.org. After a quick introduction to data types, Octallium jumps right into functional programming concepts like recursion and pattern matching. I'm 2 hours in and feel like I understand recursion (and elixir) better than ever. He also has a [updated course](https://www.octallium.com/courses/elixir/functional-elixir/) on his website and a [github repo](https://github.com/octallium/functional-programming-with-elixir) with code examples.
-Progress: 50%
+
+**Progress: 50%**
 
 
 ## [Erlang: The Movie](https://www.youtube.com/watch?v=xrIjfIjssLE)
