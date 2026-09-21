@@ -81,3 +81,65 @@ PipedRates.days_in_budget(20000, 80, 11.0)
 ```elixir
 PipedRates.apply_discount(150, 10)
 ```
+
+## Language List
+
+https://exercism.org/tracks/elixir/exercises/language-list/
+
+```elixir
+defmodule LanguageList do
+  def new(), do: []
+  def add(list, language), do: [language | list]
+  def remove(list), do: tl(list) 
+  def first(list), do: hd(list)
+  def count([]), do: 0
+  def count(list), do: count(tl(list)) + 1
+  def functional_list?(list), do: "Elixir" in list
+end
+```
+
+```elixir
+# Forgot to set a base case for the recursive count function.
+# What is the tail of a 1 item list?
+[h | t] = [1, 2]
+tl(t) # -> []
+
+l = ["Elixir", "Python", "JavaScript", "PHP"]
+LanguageList.count(l) # -> 4
+```
+
+```elixir
+# Testing examples provided in the exercise
+language_list = LanguageList.new()
+IO.inspect(language_list) # => []
+language_list = LanguageList.add(language_list, "Clojure")
+IO.inspect(language_list) # => ["Clojure"]
+language_list = LanguageList.add(language_list, "Haskell")
+IO.inspect(language_list) # => ["Haskell", "Clojure"]
+language_list = LanguageList.remove(language_list)
+IO.inspect(language_list) # => ["Clojure"]
+language_list = LanguageList.add(language_list, "Elm")
+IO.inspect(language_list) # => ["Elm", "Clojure"]
+language_list = LanguageList.add(language_list, "Prolog")
+IO.inspect(language_list)  # => ["Prolog", "Elm", "Clojure"]
+first_language = LanguageList.first(language_list)
+IO.puts(first_language) # => "Prolog"
+lang_count = LanguageList.count(language_list)
+IO.puts(lang_count) # => 3
+language_list = LanguageList.add(language_list, "Elixir")
+IO.inspect(language_list) # => ["Elixir"]
+functional? = LanguageList.functional_list?(language_list)
+IO.puts(functional?) # => true
+```
+
+```elixir
+# Here's another version I liked from Alexander-Taran's solution:
+# Pattern matching for the head and tail of a list
+
+defmodule ATLanguageList do
+  def remove([_|result]), do: result
+  def first([h|tail]), do: h
+  def count([]), do: 0
+  def count([_ | t]), do: 1 + count(t) 
+end
+```
