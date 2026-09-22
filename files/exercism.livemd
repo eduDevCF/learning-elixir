@@ -143,3 +143,112 @@ defmodule ATLanguageList do
   def count([_ | t]), do: 1 + count(t) 
 end
 ```
+
+## Log Level
+
+```elixir
+defmodule LogLevel do
+  def to_label(level, legacy?) do
+    cond do
+      legacy? == true -> 
+        cond do
+          level == 0 -> :unknown
+          level == 1 -> :debug
+          level == 2 -> :info
+          level == 3 -> :warning
+          level == 4 -> :error
+          level == 5 -> :unknown
+          true -> :unknown
+        end
+      legacy? == false ->
+        cond do
+          level == 0 -> :trace
+          level == 1 -> :debug
+          level == 2 -> :info
+          level == 3 -> :warning
+          level == 4 -> :error
+          level == 5 -> :fatal
+          true -> :unknown
+        end
+      true -> "legacy? must be a boolean"
+    end
+  end
+
+  def alert_recipient(level, legacy?) do
+    label = to_label(level, legacy?)
+    cond do
+      label == :error -> :ops
+      label == :fatal -> :ops
+      label == :unknown ->
+        cond do
+          legacy? == false -> :dev2
+          true -> :dev1
+        end
+      true -> false
+    end
+  end
+end
+```
+
+```elixir
+IO.inspect(LogLevel.to_label(0, false))
+# => :trace
+IO.inspect(LogLevel.to_label(0, true))
+# => :unknown
+IO.inspect(LogLevel.to_label(4, 3))
+```
+
+```elixir
+IO.inspect(LogLevel.alert_recipient(-1, true))
+# => :dev1
+IO.inspect(LogLevel.alert_recipient(0, false))
+# => false
+```
+
+```elixir
+# 2nd interation inspired by community solutions
+
+defmodule LogLevel2 do
+  def to_label(level, legacy?) do
+    cond do
+      level == 0 and legacy? == false -> :trace
+      level == 1 -> :debug
+      level == 2 -> :info
+      level == 3 -> :warning
+      level == 4 -> :error
+      level == 5 and legacy? == false -> :fatal
+      true -> :unknown
+    end
+  end
+
+  def alert_recipient(level, legacy?) do
+    label = to_label(level, legacy?)
+    cond do
+      label == :error or label == :fatal -> :ops
+      label == :unknown and legacy? -> :dev1
+      label == :unknown and not legacy? -> :dev2
+      true -> false
+    end
+  end
+end
+```
+
+```elixir
+IO.inspect(LogLevel2.to_label(0, false))
+# => :trace
+IO.inspect(LogLevel2.to_label(0, true))
+# => :unknown
+IO.inspect(LogLevel2.to_label(4, 3))
+# the 2nd iteration does not check for cases where legacy? is not a bool :( 
+```
+
+```elixir
+IO.inspect(LogLevel2.alert_recipient(-1, true))
+# => :dev1
+IO.inspect(LogLevel2.alert_recipient(0, false))
+# => false
+```
+
+```elixir
+LogLevel2.alert_recipient(6, false)
+```
